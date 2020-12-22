@@ -44,11 +44,11 @@ jobs:
 
     - name: Download Latest Xray
       run: |
-        DOWNLOAD_URL="https://github.com/XTLS/Xray-core/releases/download/v1.1.4/Xray-linux-64.zip"
+        DOWNLOAD_URL="https://github.com/XTLS/Xray-core/releases/download/latest/Xray-linux-64.zip"
         curl -fsSL "$DOWNLOAD_URL" -o "latest-xray.zip"
         unzip latest-xray.zip 
         rm latest-xray.zip
-        chmod -v 755 v2*
+        chmod -v 755
         ./xray -version
         mv xray ${IBM_CF_APP_NAME}
 
